@@ -12,6 +12,7 @@ RUN apt-get update \
         curl \
         ca-certificates \
         libicu-dev \
+        libicu76 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install pg_search from ParadeDB
