@@ -11,9 +11,12 @@ RUN apt-get update \
         lsb-release \
         curl \
         ca-certificates \
-        libicu-dev \
-        libicu76 \
     && rm -rf /var/lib/apt/lists/*
+
+# Install libicu74 from specific version
+RUN curl -L "http://launchpadlibrarian.net/742840016/libicu74_74.2-1ubuntu4_amd64.deb" -o /tmp/libicu74.deb \
+    && dpkg -i /tmp/libicu74.deb \
+    && rm /tmp/libicu74.deb
 
 # Install pg_search from ParadeDB
 RUN curl -L "https://github.com/paradedb/paradedb/releases/download/v0.19.4/postgresql-16-pg-search_0.19.4-1PARADEDB-noble_amd64.deb" -o /tmp/pg_search.deb \
