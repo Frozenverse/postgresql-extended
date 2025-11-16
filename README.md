@@ -1,5 +1,4 @@
 # PostgreSQL Extended
-
 - **PostgreSQL 16**: Latest stable version
 - **PostGIS 3**: Spatial and geographic objects for PostgreSQL
 - **TimescaleDB 2**: Time-series database built on PostgreSQL
